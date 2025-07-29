@@ -1,28 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:ocr_text/feature/ocr/screen/text_storage.dart';
 
 class PaymentSuccessful extends StatelessWidget {
-  const PaymentSuccessful({super.key});
+  final String extractedText;
+
+  const PaymentSuccessful({super.key, required this.extractedText});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFEFF3F8),
+      backgroundColor: const Color(0xFFEFF3F6),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.qr_code_2, size: 120),
-            const SizedBox(height: 16),
-            Text('Payment is Successful', style: TextStyle(fontSize: 22)),
-            const SizedBox(height: 30),
+            Icon(Icons.qr_code_2_rounded, size: 120),
+            SizedBox(height: 20),
+            Text("Payment is Successful", style: TextStyle(fontSize: 18)),
+            SizedBox(height: 40),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Text(
-                TextStorage.extractedText,
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.center,
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Text(extractedText, textAlign: TextAlign.center),
             ),
           ],
         ),

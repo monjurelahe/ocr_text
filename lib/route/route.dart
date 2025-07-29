@@ -20,7 +20,10 @@ class AppRoute {
 
   static List<GetPage> routes = [
     GetPage(name: scannerScreen, page: () => ScannerScreen()),
-    GetPage(name: paymentSuccessful, page: () => PaymentSuccessful()),
+    GetPage(
+      name: paymentSuccessful,
+      page: () => PaymentSuccessful(extractedText: 'text'),
+    ),
     GetPage(name: tankReading, page: () => TankReading()),
     GetPage(name: openingReading, page: () => OpeningReading()),
     GetPage(name: closingReading, page: () => ClosingReading()),
