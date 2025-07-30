@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
           getPages: AppRoute.routes,
-          initialRoute: AppRoute.scannerScreen,
+          initialRoute: AppRoute.tankReading,
         );
       },
     );
