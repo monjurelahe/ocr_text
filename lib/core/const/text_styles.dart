@@ -95,8 +95,8 @@ Ink linearButton(String buttonText) {
     decoration: BoxDecoration(
       gradient: LinearGradient(
         colors: [Color(0xff003366), Color(0xff228b22)],
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
+        begin: Alignment.topLeft,
+        end: Alignment.bottomLeft,
       ),
       borderRadius: BorderRadius.circular(11),
     ),
@@ -104,7 +104,11 @@ Ink linearButton(String buttonText) {
       height: 44.h,
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       alignment: Alignment.center,
-      child: Text(buttonText, style: buttonTextStyle()),
+      child: Text(
+        buttonText,
+        style: buttonTextStyle(),
+        textAlign: TextAlign.center,
+      ),
     ),
   );
 }
