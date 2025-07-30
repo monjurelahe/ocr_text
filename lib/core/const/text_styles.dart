@@ -67,9 +67,10 @@ ButtonStyle appButton() {
 //Button er Text Style
 TextStyle buttonTextStyle() {
   return TextStyle(
-    fontSize: 14.sp,
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
+    fontSize: 16.sp,
+    fontFamily: 'Inter',
+    color: Colors.white,
+    fontWeight: FontWeight.w400,
   );
 }
 
@@ -82,6 +83,26 @@ Ink buttonColor(String buttonText) {
     ),
     child: Container(
       height: 44.h,
+      alignment: Alignment.center,
+      child: Text(buttonText, style: buttonTextStyle()),
+    ),
+  );
+}
+
+//Linear Button
+Ink linearButton(String buttonText) {
+  return Ink(
+    decoration: BoxDecoration(
+      gradient: LinearGradient(
+        colors: [Color(0xff003366), Color(0xff228b22)],
+        begin: Alignment.centerLeft,
+        end: Alignment.centerRight,
+      ),
+      borderRadius: BorderRadius.circular(11),
+    ),
+    child: Container(
+      height: 44.h,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       alignment: Alignment.center,
       child: Text(buttonText, style: buttonTextStyle()),
     ),

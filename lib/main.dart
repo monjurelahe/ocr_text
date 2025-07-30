@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: Color.fromRGBO(245, 245, 245, 1),
-            ),
+            colorScheme: ColorScheme.fromSeed(seedColor: Color(0xfff2f8fe)),
           ),
           getPages: AppRoute.routes,
           initialRoute: AppRoute.tankReading,
